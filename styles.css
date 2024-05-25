@@ -19,7 +19,7 @@
 
 body {
     display: grid;
-    height: 80%;
+    height: auto;
     background-color: var(--eggshell);
     padding: 80px 0px;
     font-family: var(--content-font);
@@ -28,7 +28,7 @@ body {
 
 main {
     background-color: var(--white);
-    width: 46%;
+    width: 50%;
     border-radius: 20px;
     padding: 20px;
     line-height: 1.5rem;
@@ -38,9 +38,7 @@ main {
 .image-card img {
     display: block;
     margin: 0 auto;
-    width: 650px;
-    height: 300px;
-    padding-top: 10px;
+    max-width: 100%;
     border-radius: 20px;
 }
 
@@ -65,8 +63,8 @@ h1 {
 .prep {
     background-color: var(--rose-white);
     border-radius: 10px;
-    height: 130px;
-    width: 600px;
+    display: block;
+    max-width: 100%;
     margin: 10px;
     padding: 25px;
     line-height: 30px;
@@ -93,8 +91,7 @@ ul li::marker {
     font-size: 13.5px;
 }
 
-span {
-    font-weight: 700;
+strong {
     color: var(--wenge-brown);
 }
 
@@ -138,15 +135,23 @@ table {
     width: 100%;
 }
 
-td {
+th, td {
     border-bottom: 1px solid var(--light-grey); 
     padding: 10px;
     padding-left: 30px;
 }
 
-td+td {
+th {
+    font-weight: 400;
+}
+
+td {
     font-weight: bold;
     color: hsl(14, 45%, 36%);    
+}
+
+tbody > tr:last-child > th  {
+    border-bottom: 0;
 }
 
 tbody > tr:last-child > td  {
